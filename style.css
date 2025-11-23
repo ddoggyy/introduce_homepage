@@ -1,57 +1,149 @@
-/* 글자 색상과 배경색 다양화 */
+/* 기본 */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff; /* 연한 파랑 배경 */
-    color: #333333; /* 기본 글자 색 */
-    text-align: center;
+    font-family: 'Noto Sans KR', 'Roboto', Arial, sans-serif;
+    background-color: #fdfdfd; /* 밝은 배경 */
+    color: #333333;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
+/* 헤더 */
 header {
-    background-color: #ffebcd; /* 베이지색 배경 */
-    padding: 20px;
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .main-title {
-    color: #2e8b57; /* 초록색 글자 */
-    font-size: 36px; /* 큰 글씨 */
+    color: #00796b; /* 짙은 청록색 포인트 */
+    font-size: 40px;
+    font-weight: 700;
 }
 
+/* 프로필 사진 */
 .profile-photo {
     width: 200px;
     height: auto;
-    border-radius: 50%;
-    margin: 20px 0;
+    border-radius: 15px; /* 살짝 둥근 모서리 */
+    margin: 25px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* 은은한 그림자 */
 }
 
-/* 테이블 스타일 */
+/* 테이블 */
 .info-table {
-    margin: 0 auto;
+    margin: 20px auto;
     border-collapse: collapse;
-    width: 60%;
-    background-color: #fffacd; /* 연노랑 배경 */
+    width: 65%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .info-table th, .info-table td {
-    border: 1px solid #ccc;
-    padding: 10px;
+    padding: 14px;
+    text-align: left;
+    color: #555555;
 }
 
-/* 이탤릭체 적용 */
+.info-table th {
+    background-color: #f2f7f6; /* 연한 블루그린 톤 */
+    font-weight: 600;
+}
+
+/* 이탤릭 텍스트 */
 .italic-text {
     font-style: italic;
-    color: #ff4500; /* 오렌지색 글자 */
+    color: #00796b; /* 강조 색상과 통일 */
 }
 
-/* 하단 검색 엔진 이미지 */
+/* 하단 검색 엔진 */
 footer {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #e6e6fa; /* 연보라 배경 */
+    margin-top: 40px;
+    padding: 25px 0;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e6e6e6;
 }
 
 .search-logo {
     width: 50px;
-    margin: 0 10px;
+    margin: 0 12px;
+    transition: transform 0.3s, filter 0.3s;
 }
+
+.search-logo:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+/* 프로필 섹션 */
+.profile-section {
+    display: flex;
+    justify-content: center; /* 전체를 수평 중앙 정렬 */
+    align-items: flex-start;
+    gap: 60px; /* 사진과 테이블 사이 여유 */
+    margin: 60px auto; /* 상하 여백 넉넉하게 */
+    max-width: 1000px; /* 섹션 최대 폭 */
+    padding: 0 20px; /* 좌우 여백 */
+    flex-wrap: wrap; /* 화면 좁으면 세로 배치 */
+}
+
+/* 사진 */
+.profile-photo {
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    flex-shrink: 0; /* 사진 크기 고정 */
+    margin-top: 20px; /* 위쪽 여백 */
+}
+
+/* 테이블 컨테이너 */
+.profile-info {
+    flex: 1 1 400px; /* 최소 400px, 가변 폭 */
+}
+
+/* 테이블 */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.info-table th, .info-table td {
+    padding: 16px;
+    text-align: left;
+    color: #555555;
+    font-size: 16px;
+}
+
+.info-table th {
+    background-color: #f2f7f6;
+    font-weight: 600;
+}
+
+/* 자기소개 셀 */
+.info-table td.italic-text {
+    font-style: italic;
+    color: #00796b;
+    max-width: 400px;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column; /* 모바일 세로 배치 */
+        align-items: center;
+        gap: 30px;
+    }
+    .profile-photo {
+        width: 200px;
+    }
+}
+
