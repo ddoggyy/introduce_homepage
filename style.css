@@ -16,7 +16,7 @@ header {
 }
 
 .main-title {
-    color: #00796b; /* 짙은 청록색 포인트 */
+    color: #00796b; /* 짙은 청록색 */
     font-size: 40px;
     font-weight: 700;
 }
@@ -25,9 +25,9 @@ header {
 .profile-photo {
     width: 200px;
     height: auto;
-    border-radius: 15px; /* 살짝 둥근 모서리 */
+    border-radius: 15px;
     margin: 25px 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* 은은한 그림자 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
 }
 
 /* 테이블 */
@@ -48,14 +48,15 @@ header {
 }
 
 .info-table th {
-    background-color: #f2f7f6; /* 연한 블루그린 톤 */
+    background-color: #f2f7f6; 
     font-weight: 600;
 }
 
 /* 이탤릭 텍스트 */
 .italic-text {
     font-style: italic;
-    color: #00796b; /* 강조 색상과 통일 */
+    color: #00796b; 
+    background-color: #e0f7f1; /* 글자 배경색 */
 }
 
 /* 하단 검색 엔진 */
